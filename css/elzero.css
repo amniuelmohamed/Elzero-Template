@@ -1,5 +1,8 @@
 /* START CSS VARIABLES */
-:root {}
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+}
 
 /* END CSS VARIABLES */
 
