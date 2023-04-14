@@ -2,6 +2,7 @@
 :root {
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
+    --shadow-color: #ddd;
     --main-transition: .3s;
     --section-background-color: #ececec;
     --section-padding-top: 100px;
@@ -69,6 +70,8 @@ a {
 
 /* START Components */
 .main-heading {
+    text-transform: uppercase;
+    font-size: 30px;
     border: 2px solid black;
     width: fit-content;
     margin: 0 auto 80px;
@@ -119,18 +122,13 @@ a {
     animation-name: main-heading-after;
 }
 
-.main-heading h2 {
-    text-transform: uppercase;
-    font-size: 30px;
-}
-
 /* END Components */
 
 
 /* START HEADER */
 .header {
     background-color: white;
-    box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px var(--shadow-color);
 }
 
 .header .container {
@@ -412,6 +410,70 @@ a {
     padding-bottom: var(--section-padding-bottom);
 }
 
+.articles .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.articles .content .box {
+    box-shadow: 0 0 15px var(--shadow-color);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+
+.articles .content .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.20);
+}
+
+.articles .content .box img {
+    max-width: 100%;
+}
+
+.articles .content .box .text {
+    padding: 20px;
+    border-bottom: 1px solid var(--shadow-color);
+}
+
+.articles .content .box .text h3 {
+    text-transform: capitalize;
+}
+
+.articles .content .box .text p {
+    line-height: 1.5;
+    color: #777;
+    margin-top: 10px;
+}
+
+.articles .content .box .read-more {
+    padding: 20px;
+    position: relative;
+}
+
+.articles .content .box .read-more::after {
+    content: "\f178";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 14px;
+    color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+.articles .content .box:hover .read-more::after {
+    animation: move-arrow-right .6s linear infinite;
+}
+
+.articles .content .box .read-more a {
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
 /* START ARTICLES */
 
 
@@ -475,6 +537,12 @@ a {
         border-radius: 0;
         width: 50%;
         height: 100%;
+    }
+}
+
+@keyframes move-arrow-right {
+    to {
+        right: 10px
     }
 }
 
