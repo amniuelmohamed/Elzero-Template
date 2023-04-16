@@ -919,6 +919,110 @@ a {
 
 
 
+/* START SERVICES */
+.services {
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+    background-color: var(--section-background-color);
+}
+
+.services .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    counter-reset: srv;
+}
+
+.services .box {
+    background-color: white;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    position: relative;
+    transition: var(--main-transition);
+}
+
+.services .box:hover {
+    transform: translateY(-10px);
+}
+
+.services .box::before,
+.services .box::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+}
+
+.services .box:hover::before {
+    width: 100%;
+}
+
+.services .box .service {
+    text-align: center;
+    padding: 30px 10px 40px;
+}
+
+.services .box .service i {
+    color: #d5d5d5;
+}
+
+.services .box .service h3 {
+    margin-top: 20px;
+    font-size: 25px;
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+
+.services .box .info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: right;
+    position: relative;
+    overflow: hidden;
+}
+
+.services .box .info::before {
+    counter-increment: srv;
+    content: counter(srv, decimal-leading-zero);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: fit-content;
+    height: 100%;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px 0 20px;
+    font-size: 30px;
+}
+
+.services .box .info::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    width: 50px;
+    height: 101%;
+    background-color: #d5d5d5;
+    transform: skewX(-30deg);
+}
+
+.services .box .info a {
+    color: var(--main-color);
+}
+
+/* END SERVICES */
+
+
+
+
 /* START ANIMATIONS */
 @keyframes move-landing-img {
 
