@@ -76,6 +76,7 @@ a {
     margin: 0 auto 80px;
     padding: 10px 20px;
     position: relative;
+    z-index: 1;
     transition: var(--main-transition);
 }
 
@@ -724,6 +725,62 @@ a {
 
 /* END FEATURES */
 
+
+
+/* START TESTIMONIALS */
+.testimonials {
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+    background-color: var(--section-background-color);
+    position: relative;
+}
+
+.testimonials .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonials .box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    position: relative;
+}
+
+.testimonials .box .avatar {
+    width: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background-color);
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    right: -10px;
+}
+
+.testimonials .box h3 {
+    text-transform: capitalize;
+}
+
+.testimonials .box .job-title {
+    display: block;
+    margin: 10px 0;
+    text-transform: capitalize;
+    color: #777;
+}
+
+.testimonials .box .rate .filled {
+    color: #ffc107;
+}
+
+.testimonials .box p {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #777;
+}
+
+/* END TESTIMONIALS */
 
 
 
