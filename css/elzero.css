@@ -1161,6 +1161,152 @@ a {
 
 
 
+/* START EVENTS */
+.events {
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+    background-color: white;
+}
+
+.events .content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.events .event-img {
+    max-width: 450px;
+}
+
+@media (max-width: 991px) {
+    .events .event-img {
+        display: none;
+    }
+}
+
+.events .latest-events {
+    text-align: center;
+    flex: 1;
+}
+
+.events .latest-events .counter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.events .latest-events .counter>div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    width: 75px;
+    transition: var(--main-transition);
+}
+
+.events .latest-events .counter>div .number {
+    border-bottom: 1px solid #d4d4d4;
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 15px;
+    transition: var(--main-transition);
+}
+
+.events .latest-events .counter>div:hover,
+.events .latest-events .counter>div:hover .number {
+    border-color: var(--main-color);
+}
+
+.events .latest-events .counter>div .text {
+    font-size: 13px;
+    padding: 8px 10px;
+}
+
+.events .latest-events h3 {
+    font-size: 30px;
+    margin: 40px 0 20px;
+}
+
+.events .latest-events p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #777;
+}
+
+.events .subscription {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 100px;
+}
+
+.events .subscription form {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #f6f5f5;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.events .subscription form input[type="email"] {
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    margin-right: 20px;
+    width: 400px;
+    max-width: 100%;
+    caret-color: var(--main-color);
+}
+
+.events .subscription form input[type="email"]:focus {
+    outline: none;
+}
+
+.events .subscription form input[type="email"]::placeholder {
+    transition: var(--main-transition);
+}
+
+.events .subscription form input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+
+.events .subscription form input[type="submit"] {
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+@media (max-width: 767px) {
+    .events .subscription form {
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .events .subscription form input[type="email"] {
+        border-radius: 0;
+        margin: 0 0 20px;
+    }
+
+    .events .subscription form input[type="submit"] {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+.events .subscription form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+/* END EVENTS */
+
+
+
 
 /* START ANIMATIONS */
 @keyframes move-landing-img {
