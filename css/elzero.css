@@ -1077,6 +1077,90 @@ a {
 
 
 
+/* START HOW IT WORKS */
+.how-it-works {
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+    background-color: var(--section-background-color);
+}
+
+.how-it-works .content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+@media (max-width: 1199px) {
+    .how-it-works .content {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+.how-it-works .content>img {
+    max-width: 100%;
+}
+
+.how-it-works .step {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #f6f5f5;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .how-it-works .step {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.how-it-works .step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ededed;
+    height: 0%;
+    width: 0%;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+
+.how-it-works .step:hover::after {
+    height: 100%;
+    width: 100%;
+}
+
+.how-it-works .step:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.how-it-works .step img {
+    width: 64px;
+}
+
+.how-it-works .step .text h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.how-it-works .step .text p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #777;
+}
+
+/* END HOW IT WORKS */
+
+
+
 
 /* START ANIMATIONS */
 @keyframes move-landing-img {
